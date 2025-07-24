@@ -1,0 +1,93 @@
+header {
+    padding: 80px 10px;
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+
+        & .logo {
+            font-size: 40px;
+            letter-spacing: 1px;
+            line-height: 120%;
+            color: #282A30;
+            font-weight: 800;
+        }
+
+        & .navigation {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            letter-spacing: 1px;
+            line-height: 120%;
+            color: #282A30;
+            text-align: center;
+
+            & a {
+                display: inline-block;
+                transition: color 0.5s ease;
+                padding: 6px 17px;
+            }
+
+            & a:not(.active):hover {
+                border-bottom: 3px solid #F7515C;
+                color: #F7515C;
+            }
+        }
+
+        & .cartSearch {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            text-align: center;
+
+            & img {
+                width: 24px;
+                height: 24px;
+                transition: all 0.5s ease;
+            }
+
+            & img:not(.active):hover {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    @media(max-width:900px) {
+        padding: 30px 10px;
+
+        & .container {
+            display: block;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+
+            & .navigation {
+                padding: 40px 10px;
+                margin: auto;
+                justify-content: space-between;
+                gap: 0px;
+            }
+
+            & .cartSearch {
+                display: none;
+            }
+        }
+    }
+
+    @media(max-width:500px) {
+        & .container {
+            & .navigation {
+                display: block;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 0px;
+
+                & a {
+                    display: block;
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}
